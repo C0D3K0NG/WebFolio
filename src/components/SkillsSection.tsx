@@ -100,6 +100,7 @@ const skills: Skill[] = [
 const SkillsSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [hoveredSkill, setHoveredSkill] = useState<number | null>(null);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -127,7 +128,7 @@ const SkillsSection = () => {
     <section 
       id="skills" 
       ref={sectionRef} 
-      className="py-20 px-6"
+      className="py-20 px-6 relative web-bg dark:venom-bg"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className={cn(
@@ -135,7 +136,11 @@ const SkillsSection = () => {
           "transition-all duration-700",
           isVisible ? "opacity-100" : "opacity-0",
         )}>
-          Powers & Gadgets
+          <span className="relative inline-block">
+            Powers & Gadgets
+            <span className="absolute -bottom-2 left-0 w-full h-1 bg-primary transform scale-x-0 origin-left transition-transform duration-500 delay-300" 
+              style={{ transform: isVisible ? 'scaleX(1)' : 'scaleX(0)' }}></span>
+          </span>
         </h2>
         
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 max-w-4xl mx-auto">
@@ -151,17 +156,45 @@ const SkillsSection = () => {
                 { "delay-300": index % 4 === 2 },
                 { "delay-400": index % 4 === 3 },
               )}
+              onMouseEnter={() => setHoveredSkill(skill.id)}
+              onMouseLeave={() => setHoveredSkill(null)}
             >
-              <div className="group relative">
-                <div className="w-20 h-20 rounded-full flex items-center justify-center bg-muted border border-border group-hover:border-primary transition-colors duration-300">
+              <div className={cn(
+                "group relative",
+                hoveredSkill === skill.id ? "animate-pulse-glow" : ""
+              )}>
+                <div className={cn(
+                  "w-20 h-20 rounded-full flex items-center justify-center bg-muted border border-border",
+                  "transition-all duration-300",
+                  hoveredSkill === skill.id ? "border-primary transform scale-110" : "",
+                  "overflow-hidden relative"
+                )}>
                   <div 
-                    className="w-10 h-10 text-foreground group-hover:text-primary transition-colors duration-300"
+                    className={cn(
+                      "w-10 h-10 text-foreground transition-all duration-300 relative z-10",
+                      hoveredSkill === skill.id ? "text-primary transform scale-125" : ""
+                    )}
                     dangerouslySetInnerHTML={{ __html: skill.icon }}
                   />
+                  {hoveredSkill === skill.id && (
+                    <div className="absolute inset-0 bg-gradient-shimmer animate-shimmer"></div>
+                  )}
                 </div>
-                <div className="absolute -inset-0.5 rounded-full opacity-0 group-hover:opacity-20 bg-primary transition-opacity duration-300" />
+                <div className={cn(
+                  "absolute -inset-1 rounded-full opacity-0 transition-opacity duration-300",
+                  "bg-gradient-to-r from-primary/30 to-secondary/30 blur",
+                  hoveredSkill === skill.id ? "opacity-70" : ""
+                )} />
               </div>
-              <p className="mt-4 font-medium text-center">{skill.name}</p>
+              <p className={cn(
+                "mt-4 font-medium text-center transition-all duration-300",
+                hoveredSkill === skill.id ? "text-primary font-bold" : ""
+              )}>
+                {skill.name}
+              </p>
+              {hoveredSkill === skill.id && (
+                <div className="mt-2 h-1 w-10 bg-primary rounded-full animate-scale-in"></div>
+              )}
             </div>
           ))}
         </div>

@@ -42,7 +42,7 @@ const Index = () => {
   
   return (
     <div className={cn(
-      "min-h-screen",
+      "min-h-screen web-bg dark:venom-bg",
       "dark:grunge-bg",
       !contentVisible ? "overflow-hidden" : ""
     )}>
