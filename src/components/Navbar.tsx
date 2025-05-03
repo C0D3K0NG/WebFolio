@@ -28,14 +28,16 @@ const Navbar = () => {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-40 transition-all duration-300 px-6 py-4",
-        scrolled ? "bg-background/80 backdrop-blur-lg shadow-md" : "bg-transparent"
+        scrolled 
+          ? "bg-background/80 backdrop-blur-lg shadow-md" 
+          : "bg-background/50 backdrop-blur-sm shadow-sm" // Added background and subtle shadow for better visibility when not scrolled
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
           <a href="#" className="font-bangers text-2xl">
-            <span className="text-primary">Web</span>
-            <span>Dev</span>
+            <span className="text-primary">RAJDEEP</span>
+            <span> SAHA</span>
           </a>
         </div>
         
