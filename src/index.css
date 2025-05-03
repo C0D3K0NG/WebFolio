@@ -157,4 +157,101 @@
     pointer-events: none;
     z-index: -1;
   }
+
+  /* Web background in light mode */
+  .web-bg {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .web-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/web-pattern.png');
+    background-size: 300px;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  /* Venom texture in dark mode */
+  .dark .venom-bg {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .dark .venom-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/venom-texture.png');
+    background-size: cover;
+    opacity: 0.07;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .hover-glow {
+    transition: all 0.3s ease;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 15px 3px hsla(var(--primary), 0.3);
+  }
+  
+  .shimmer-overlay {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shimmer-overlay::after {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: linear-gradient(
+      45deg, 
+      rgba(255,255,255,0) 0%, 
+      rgba(255,255,255,0.1) 50%, 
+      rgba(255,255,255,0) 100%
+    );
+    transform: rotate(45deg);
+    animation: shimmerEffect 5s linear infinite;
+    pointer-events: none;
+  }
+  
+  @keyframes shimmerEffect {
+    0% {
+      transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+      transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+  }
+  
+  .text-gradient-spidey {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .dark .text-gradient-venom {
+    background: linear-gradient(135deg, #F52D4F 0%, #1B1B1B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
 }
