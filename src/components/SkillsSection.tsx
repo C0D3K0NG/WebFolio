@@ -12,88 +12,102 @@ const skills: Skill[] = [
   {
     id: 1,
     name: "HTML",
-    icon: `
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M13 16L18 10L15 6L8 15L13 16Z"/>
-        <path d="M2 12L7 4L13 3L17 7L12 20L2 12Z"/>
-      </svg>
-    `,
+    icon: `<img src="src/icons/html.svg" alt="HTML" class="w-full h-full dark:filter dark:invert dark:brightness-100 dark:sepia-0 dark:hue-rotate-[0deg] dark:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(100%)_saturate(7466%)_hue-rotate(357deg)_brightness(119%)_contrast(124%)]" />`,
   },
   {
     id: 2,
     name: "CSS",
-    icon: `
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="10"/>
-        <path d="M12 2C14.6522 2 17.1957 3.05357 19.0711 4.92893C20.9464 6.8043 22 9.34783 22 12C22 14.6522 20.9464 17.1957 19.0711 19.0711C17.1957 20.9464 14.6522 22 12 22"/>
-      </svg>
-    `,
+    icon: `<img src="src/icons/css.svg" alt="CSS" class="w-full h-full dark:filter dark:invert dark:brightness-100 dark:sepia-0 dark:hue-rotate-[0deg] dark:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(100%)_saturate(7466%)_hue-rotate(357deg)_brightness(119%)_contrast(124%)]" />`,
   },
   {
     id: 3,
     name: "JavaScript",
-    icon: `
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"/>
-      </svg>
-    `,
+    icon: `<img src="src/icons/js.svg" alt="JavaScript" class="w-full h-full dark:filter dark:invert dark:brightness-100 dark:sepia-0 dark:hue-rotate-[0deg] dark:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(100%)_saturate(7466%)_hue-rotate(357deg)_brightness(119%)_contrast(124%)]" />`,
   },
   {
     id: 4,
     name: "React",
-    icon: `
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="3"/>
-        <circle cx="19" cy="5" r="2"/>
-        <circle cx="5" cy="19" r="2"/>
-        <circle cx="5" cy="5" r="2"/>
-        <circle cx="19" cy="19" r="2"/>
-        <path d="M5 5L19 19M5 19L19 5"/>
-      </svg>
-    `,
+    icon: `<img src="src/icons/react.svg" alt="React" class="w-full h-full dark:filter dark:invert dark:brightness-100 dark:sepia-0 dark:hue-rotate-[0deg] dark:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(100%)_saturate(7466%)_hue-rotate(357deg)_brightness(119%)_contrast(124%)]" />`,
   },
   {
     id: 5,
-    name: "Node.js",
-    icon: `
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 22L3 17V7L12 2L21 7V17L12 22Z"/>
-        <path d="M12 22L12 11"/>
-        <path d="M17 14L7 7"/>
-      </svg>
-    `,
+    name: "SQL",
+    icon: `<img src="src/icons/sql.svg" alt="SQL" class="w-full h-full dark:filter dark:invert dark:brightness-100 dark:sepia-0 dark:hue-rotate-[0deg] dark:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(100%)_saturate(7466%)_hue-rotate(357deg)_brightness(119%)_contrast(124%)]" />`,
   },
   {
     id: 6,
     name: "TypeScript",
-    icon: `
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M16 18L22 12L16 6"/>
-        <path d="M8 6L2 12L8 18"/>
-      </svg>
-    `,
+    icon: `<img src="src/icons/typescript.svg" alt="TypeScript" class="w-full h-full dark:filter dark:invert dark:brightness-100 dark:sepia-0 dark:hue-rotate-[0deg] dark:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(100%)_saturate(7466%)_hue-rotate(357deg)_brightness(119%)_contrast(124%)]" />`,
   },
   {
     id: 7,
     name: "Next.js",
-    icon: `
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M5 3L20 3"/>
-        <path d="M6 8L18 8"/>
-        <path d="M8 12L16 12"/>
-        <path d="M10 17L14 17"/>
-      </svg>
-    `,
+    icon: `<img src="src/icons/nextjs.svg" alt="Next.js" class="w-full h-full dark:filter dark:invert dark:brightness-100 dark:sepia-0 dark:hue-rotate-[0deg] dark:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(100%)_saturate(7466%)_hue-rotate(357deg)_brightness(119%)_contrast(124%)]" />`,
   },
   {
     id: 8,
     name: "Tailwind CSS",
-    icon: `
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M4 4H20V20H4z"/>
-        <path d="M9 9C9 7.89543 9.89543 7 11 7H13C14.1046 7 15 7.89543 15 9V15C15 16.1046 14.1046 17 13 17H11C9.89543 17 9 16.1046 9 15z"/>
-      </svg>
-    `,
+    icon: `<img src="src/icons/tailwind.svg" alt="Tailwind CSS" class="w-full h-full dark:filter dark:invert dark:brightness-100 dark:sepia-0 dark:hue-rotate-[0deg] dark:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(100%)_saturate(7466%)_hue-rotate(357deg)_brightness(119%)_contrast(124%)]" />`,
+  },
+  {
+    id: 9,
+    name: "Python",
+    icon: `<img src="src/icons/python.svg" alt="Python" class="w-full h-full dark:filter dark:invert dark:brightness-100 dark:sepia-0 dark:hue-rotate-[0deg] dark:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(100%)_saturate(7466%)_hue-rotate(357deg)_brightness(119%)_contrast(124%)]" />`,
+  },
+  {
+    id: 10,
+    name: "Docker",
+    icon: `<img src="src/icons/docker.svg" alt="Docker" class="w-full h-full dark:filter dark:invert dark:brightness-100 dark:sepia-0 dark:hue-rotate-[0deg] dark:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(100%)_saturate(7466%)_hue-rotate(357deg)_brightness(119%)_contrast(124%)]" />`,
+  },
+  {
+    id: 11,
+    name: "Kubernetes",
+    icon: `<img src="src/icons/kubernetes.svg" alt="Kubernetes" class="w-full h-full dark:filter dark:invert dark:brightness-100 dark:sepia-0 dark:hue-rotate-[0deg] dark:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(100%)_saturate(7466%)_hue-rotate(357deg)_brightness(119%)_contrast(124%)]" />`,
+  },
+  {
+    id: 12,
+    name: "PostgreSQL",
+    icon: `<img src="src/icons/postgres.svg" alt="PostgreSQL" class="w-full h-full dark:filter dark:invert dark:brightness-100 dark:sepia-0 dark:hue-rotate-[0deg] dark:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(100%)_saturate(7466%)_hue-rotate(357deg)_brightness(119%)_contrast(124%)]" />`,
+  },
+  {
+    id: 13,
+    name: "MongoDB",
+    icon: `<img src="src/icons/mongodb.svg" alt="MongoDB" class="w-full h-full dark:filter dark:invert dark:brightness-100 dark:sepia-0 dark:hue-rotate-[0deg] dark:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(100%)_saturate(7466%)_hue-rotate(357deg)_brightness(119%)_contrast(124%)]" />`,
+  },
+  {
+    id: 14,
+    name: "Firebase",
+    icon: `<img src="src/icons/firebase.svg" alt="Firebase" class="w-full h-full dark:filter dark:invert dark:brightness-100 dark:sepia-0 dark:hue-rotate-[0deg] dark:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(100%)_saturate(7466%)_hue-rotate(357deg)_brightness(119%)_contrast(124%)]" />`,
+  },
+  {
+    id: 15,
+    name: "AWS",
+    icon: `<img src="src/icons/aws.svg" alt="AWS" class="w-full h-full dark:filter dark:invert dark:brightness-100 dark:sepia-0 dark:hue-rotate-[0deg] dark:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(100%)_saturate(7466%)_hue-rotate(357deg)_brightness(119%)_contrast(124%)]" />`,
+  },
+  {
+    id: 16,
+    name: "GitHub",
+    icon: `<img src="src/icons/github.svg" alt="GitHub" class="w-full h-full dark:filter dark:invert dark:brightness-100 dark:sepia-0 dark:hue-rotate-[0deg] dark:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(100%)_saturate(7466%)_hue-rotate(357deg)_brightness(119%)_contrast(124%)]" />`,
+  },
+  {
+    id: 17,
+    name: "Figma",
+    icon: `<img src="src/icons/figma.svg" alt="Figma" class="w-full h-full dark:filter dark:invert dark:brightness-100 dark:sepia-0 dark:hue-rotate-[0deg] dark:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(100%)_saturate(7466%)_hue-rotate(357deg)_brightness(119%)_contrast(124%)]" />`,
+  },
+  {
+    id: 18,
+    name: "Canva",
+    icon: `<img src="src/icons/canva.svg" alt="Canva" class="w-full h-full dark:filter dark:invert dark:brightness-100 dark:sepia-0 dark:hue-rotate-[0deg] dark:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(100%)_saturate(7466%)_hue-rotate(357deg)_brightness(119%)_contrast(124%)]" />`,
+  },
+  {
+    id: 19,
+    name: "Postman",
+    icon: `<img src="src/icons/postman.svg" alt="Postman" class="w-full h-full dark:filter dark:invert dark:brightness-100 dark:sepia-0 dark:hue-rotate-[0deg] dark:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(100%)_saturate(7466%)_hue-rotate(357deg)_brightness(119%)_contrast(124%)]" />`,
+  },
+  {
+    id: 20,
+    name: "Kali Linux",
+    icon: `<img src="src/icons/kali.svg" alt="Kali Linux" class="w-full h-full dark:filter dark:invert dark:brightness-100 dark:sepia-0 dark:hue-rotate-[0deg] dark:[filter:brightness(0)_saturate(100%)_invert(17%)_sepia(100%)_saturate(7466%)_hue-rotate(357deg)_brightness(119%)_contrast(124%)]" />`,
   },
 ];
 
@@ -143,7 +157,7 @@ const SkillsSection = () => {
           </span>
         </h2>
         
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 max-w-4xl mx-auto">
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-8 max-w-5xl mx-auto">
           {skills.map((skill, index) => (
             <div 
               key={skill.id}
@@ -151,50 +165,18 @@ const SkillsSection = () => {
                 "flex flex-col items-center",
                 "transition-all duration-700",
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
-                { "delay-100": index % 4 === 0 },
-                { "delay-200": index % 4 === 1 },
-                { "delay-300": index % 4 === 2 },
-                { "delay-400": index % 4 === 3 },
+                { "delay-100": index % 5 === 0 },
+                { "delay-200": index % 5 === 1 },
+                { "delay-300": index % 5 === 2 },
+                { "delay-400": index % 5 === 3 },
+                { "delay-500": index % 5 === 4 },
               )}
-              onMouseEnter={() => setHoveredSkill(skill.id)}
-              onMouseLeave={() => setHoveredSkill(null)}
             >
-              <div className={cn(
-                "group relative",
-                hoveredSkill === skill.id ? "animate-pulse-glow" : ""
-              )}>
-                <div className={cn(
-                  "w-20 h-20 rounded-full flex items-center justify-center bg-muted border border-border",
-                  "transition-all duration-300",
-                  hoveredSkill === skill.id ? "border-primary transform scale-110" : "",
-                  "overflow-hidden relative"
-                )}>
-                  <div 
-                    className={cn(
-                      "w-10 h-10 text-foreground transition-all duration-300 relative z-10",
-                      hoveredSkill === skill.id ? "text-primary transform scale-125" : ""
-                    )}
-                    dangerouslySetInnerHTML={{ __html: skill.icon }}
-                  />
-                  {hoveredSkill === skill.id && (
-                    <div className="absolute inset-0 bg-gradient-shimmer animate-shimmer"></div>
-                  )}
-                </div>
-                <div className={cn(
-                  "absolute -inset-1 rounded-full opacity-0 transition-opacity duration-300",
-                  "bg-gradient-to-r from-primary/30 to-secondary/30 blur",
-                  hoveredSkill === skill.id ? "opacity-70" : ""
-                )} />
-              </div>
-              <p className={cn(
-                "mt-4 font-medium text-center transition-all duration-300",
-                hoveredSkill === skill.id ? "text-primary font-bold" : ""
-              )}>
-                {skill.name}
-              </p>
-              {hoveredSkill === skill.id && (
-                <div className="mt-2 h-1 w-10 bg-primary rounded-full animate-scale-in"></div>
-              )}
+              <div 
+                className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 flex items-center justify-center p-2 rounded-lg bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                dangerouslySetInnerHTML={{ __html: skill.icon }}
+              />
+              <span className="mt-2 text-xs sm:text-sm font-medium">{skill.name}</span>
             </div>
           ))}
         </div>
